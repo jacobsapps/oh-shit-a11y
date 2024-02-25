@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct OhShitA11yApp: App {
+    
+    @State private var isLoggedIn: Bool = true
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .fullScreenCover(isPresented: $isLoggedIn) {
+                    OnboardingView(isLoggedIn: $isLoggedIn)
+                }
         }
     }
 }

@@ -14,7 +14,7 @@ struct OhShitA11yApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
+            CatsView(isLoggedIn: $isLoggedIn)
                 .fullScreenCover(isPresented: $isLoggedIn) {
                     OnboardingView(isLoggedIn: $isLoggedIn)
                 }

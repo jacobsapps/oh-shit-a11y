@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "a11yutils",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jacobsapps/A11yUtils",
+      "state" : {
+        "branch" : "main",
+        "revision" : "fd3636a3124107126f65a8ec669092cb7c3151c3"
+      }
+    }
+  ],
+  "version" : 2
+}

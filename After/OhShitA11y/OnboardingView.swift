@@ -5,6 +5,7 @@
 //  Created by Jacob Bartlett on 25/02/2024.
 //
 
+import A11yUtils
 import SwiftUI
 
 struct OnboardingView: View {
@@ -28,13 +29,12 @@ struct OnboardingView: View {
                 
                 OnboardingReasonsText()
                 
-                Spacer()
-                
                 LoginButtonView(isLoggedIn: $isLoggedIn,
                                 text: "Log in")
                 .frame(maxHeight: .infinity, alignment: .bottom)
             }
             .padding(.horizontal)
+            .a11yScrollView(viewContainsTextFields: false)
             .navigationTitle("Create account")
         }
     }

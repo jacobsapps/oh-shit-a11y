@@ -22,7 +22,7 @@ struct LoginButtonView: View {
                 .fontWeight(.bold)
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
-                .background(Capsule().foregroundColor(.green))
+                .background(Capsule().foregroundColor(.yellow))
         })
     }
 }

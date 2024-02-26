@@ -14,6 +14,7 @@
 		1688A7782B8BD70C00314AC3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1688A7772B8BD70C00314AC3 /* OnboardingView.swift */; };
 		1688A77A2B8CA66200314AC3 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1688A7792B8CA66200314AC3 /* Cat.swift */; };
 		1688A77C2B8CCFE500314AC3 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1688A77B2B8CCFE500314AC3 /* LoginButtonView.swift */; };
+		16F165C12B8D49FF006BF3E3 /* A11yUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 16F165C02B8D49FF006BF3E3 /* A11yUtils */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F165C12B8D49FF006BF3E3 /* A11yUtils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,9 @@
 			dependencies = (
 			);
 			name = OhShitA11y;
+			packageProductDependencies = (
+				16F165C02B8D49FF006BF3E3 /* A11yUtils */,
+			);
 			productName = OhShitA11y;
 			productReference = 1688A7662B8B7EFA00314AC3 /* OhShitA11y.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 1688A75D2B8B7EFA00314AC3;
+			packageReferences = (
+				16F165BF2B8D49FF006BF3E3 /* XCRemoteSwiftPackageReference "A11yUtils" */,
+			);
 			productRefGroup = 1688A7672B8B7EFA00314AC3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -356,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16F165BF2B8D49FF006BF3E3 /* XCRemoteSwiftPackageReference "A11yUtils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jacobsapps/A11yUtils";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16F165C02B8D49FF006BF3E3 /* A11yUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16F165BF2B8D49FF006BF3E3 /* XCRemoteSwiftPackageReference "A11yUtils" */;
+			productName = A11yUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1688A75E2B8B7EFA00314AC3 /* Project object */;
 }

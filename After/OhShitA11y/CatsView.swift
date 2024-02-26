@@ -5,6 +5,7 @@
 //  Created by Jacob Bartlett on 25/02/2024.
 //
 
+import A11yUtils
 import SwiftUI
 
 struct CatsView: View {
@@ -31,18 +32,20 @@ struct CatsView: View {
 
 struct CatView: View {
     
+    @ScaledMetric(relativeTo: .largeTitle) private var imageSize: CGFloat = 72
+    @ScaledMetric(relativeTo: .body) private var iconSize: CGFloat = 24
     let cat: Cat
     
     var body: some View {
-        HStack {
+        A11yHStack {
             Image(cat.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 72, height: 72)
+                .frame(width: imageSize, height: imageSize)
                 .clipShape(Circle())
             
             VStack {
-                HStack {
+                A11yHStack {
                     Text(cat.name)
                         .font(.title)
                         .fontWeight(.medium)
@@ -58,7 +61,7 @@ struct CatView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .foregroundStyle(.secondary)
-                        .frame(width: 24, height: 24)
+                        .frame(width: iconSize, height: iconSize)
                     
                     Text(cat.quote)
                         .font(.body)

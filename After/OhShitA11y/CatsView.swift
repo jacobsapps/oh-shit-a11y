@@ -16,14 +16,16 @@ struct CatsView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: .zero) {
-                List(cats) {
+                List(cats, id: \.name) {
                     CatView(cat: $0)
+                        .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
                 }
                 .listStyle(PlainListStyle())
                 
                 LoginButtonView(isLoggedIn: $isLoggedIn,
                                 text: "Log out")
+                .padding()
             }
             .navigationTitle("Cats")
         }
@@ -43,6 +45,7 @@ struct CatView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: imageSize, height: imageSize)
                 .clipShape(Circle())
+                .accessibilityLabel(Text(cat.imageDescription))
             
             VStack {
                 A11yHStack {
@@ -68,10 +71,10 @@ struct CatView: View {
                         .italic()
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
+                .accessibilityElement(children: .combine)
             }
         }
         .padding()
-        .listRowBackground(Color.clear)
         .background(Color.white)
         .cornerRadius(12)
         .shadow(radius: 12)

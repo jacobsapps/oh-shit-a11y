@@ -7,11 +7,7 @@
 
 import Foundation
 
-struct Cat: Identifiable {
-    
-    var id: String {
-        name
-    }
+struct Cat {
     
     let name: String
     let quote: String
@@ -23,7 +19,7 @@ struct Cat: Identifiable {
         [
             Cat(name: "Rosie", quote: "The alpha tiger", age: 4, image: "rosie", icon: "dumbbell"),
             Cat(name: "Cody", quote: "The silly one", age: 4, image: "cody", icon: "cat.fill"),
-            Cat(name: "Luna", quote: "The baby girl", age: 3, image: "luna", icon: "heart.circle.fill"),
+            Cat(name: "Luna", quote: "The baby girl", age: 3, image: "luna", icon: "heart.circle.fill")
         ]
     }
 }

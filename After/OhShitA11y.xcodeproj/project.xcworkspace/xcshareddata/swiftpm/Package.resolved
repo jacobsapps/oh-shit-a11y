@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jacobsapps/A11yUtils",
       "state" : {
-        "branch" : "main",
-        "revision" : "fd3636a3124107126f65a8ec669092cb7c3151c3"
+        "revision" : "aaa8421b06fc04a4d680c2a615ee33e29d9824d1",
+        "version" : "1.0.0"
       }
     }
   ],

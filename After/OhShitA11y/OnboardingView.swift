@@ -26,6 +26,7 @@ struct OnboardingView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 300)
+                    .accessibilityLabel(Text("My three cats: Cody, Rosie, and Luna"))
                 
                 OnboardingReasonsText()
                 
@@ -34,7 +35,7 @@ struct OnboardingView: View {
                 .frame(maxHeight: .infinity, alignment: .bottom)
             }
             .padding(.horizontal)
-            .a11yScrollView(viewContainsTextFields: false)
+            .a11yScrollView()
             .navigationTitle("Create account")
         }
     }
